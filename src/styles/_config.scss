@@ -1,0 +1,47 @@
+$primary-color: #0D0A0C;
+$secondary-color: #05a3a7;
+$sec-color: #e6e6e6;
+$sec-color2: #222222;
+$sec-color3: #787878;
+$color4: #063041;
+$color5: #1B404F;
+$colorr: #038486;
+
+
+
+//Typography
+@font-face {
+    font-family: 'CrimsonText', serif;
+    src: url(../utils/CrimsonText-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: 'WorkSans', sans-serif;
+    src: url(../utils/WorkSans-Regular.ttf);
+  }
+
+
+//media query mixins
+@mixin mediaSm {
+    @media screen and (max-width:500px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width:769px) and (max-width:1170px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width:1171px) {
+        @content;
+    }
+}

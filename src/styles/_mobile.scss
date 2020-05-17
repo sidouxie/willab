@@ -1,0 +1,66 @@
+// WideScreens
+
+@include mediaXl {
+    
+}
+
+//desktops & laptops
+@include mediaLg {
+    .grid, .grid-2, .grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+//tablets & small laptops
+@include mediaMd {
+    main {
+        padding-top: 15vh;
+    }
+    .grid, .grid-2, .grid-3 {
+        grid-template-columns: 2fr;
+    }
+    .sec-grid{
+        grid-template-columns: 1fr
+    }
+    .sec-img img{
+        padding: 0;
+        margin-bottom: 0.5rem;
+
+        .subtitle{
+            margin:0 1rem;
+        }
+    }
+
+    footer img{
+        width: 50%;
+    }
+}
+
+//smartphones
+@include mediaSm {
+    main {
+        padding-top: 10vh;
+    }
+
+    .main-items2 {
+        grid-template-columns: 1fr 1fr !important;
+    }
+
+    .sec-grid{
+        grid-template-columns: 1fr
+    }
+
+    .sec-img img{
+        padding: 0;
+        margin-bottom: 0.5rem;
+
+        .subtitle{
+            margin:0 1rem;
+        }
+    }
+
+    footer img{
+        width: 50%;
+    }
+}
