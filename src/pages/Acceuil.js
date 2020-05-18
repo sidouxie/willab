@@ -12,7 +12,7 @@ export default function Acceuil() {
     return (
         <div>
             <SEO
-                subtitle={"Acceuil"}
+                subtitle={"Photographe Professionnel à Alger"}
                 title={"Walid Khaladi - Photographe Professionnel à Alger"}
                 description={"Walid Khaladi est un Photographe Professionnel de mode et de célébrités qui réalise des portraits de magazines, des photographies publicitaires basé à Alger."}
                 author={"@walidkhaladi"}

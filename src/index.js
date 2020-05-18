@@ -15,7 +15,7 @@ import Evenement from "./pages/Evenement"
 import Cookies from "./pages/Cookies"
 import Thanks from "./pages/Thanks"
 import NotFoundPage from "./pages/404"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 import Social from './components/Social'
 import Footer from './components/Footer'
 import CookieConsent from 'react-cookie-consent'
@@ -41,23 +41,22 @@ function App() {
             <Route path='/cookies' component={Cookies}/>
             <Route path='/politique-confidentialite' component={Politique}/>
             <Route path='/thanks' component={Thanks} />
-            <Route component={NotFoundPage} />
+            <Route path='*' component={NotFoundPage} />
           </Switch>
         <Social />
         <Footer />
-      </Router>
-      <ContextPop />
-      <CookieConsent
-        location="bottom"
-        buttonText="Accepter"
-        cookieName="Walid Khaladi cookies"
-        style={{ background: "rgba(0,0,0,0.95)", alignItems:"center" }}
-        buttonStyle={{ background: "#05a3a7", padding: "10px 15px" ,borderRadius: "25px" ,color: "#fff", fontSize: "13px" }}
-        expires={150}><span className="text-cookies">Nous utilisons des cookies pour vous garantir la meilleure expèrience sur notre site. Si vous continuez à utiliser ce dernier, 
-        nous considérerons que vous acceptez l'utilisation des cookies. </span>
-        <span><a href='/cookies' id='savoir'>En savoir plus</a></span>
+        <ContextPop />
+        <CookieConsent
+          location="bottom"
+          buttonText="Accepter"
+          cookieName="Walid Khaladi cookies"
+          style={{ background: "rgba(0,0,0,0.95)", alignItems:"center" }}
+          buttonStyle={{ background: "#05a3a7", padding: "10px 15px" ,borderRadius: "25px" ,color: "#fff", fontSize: "13px" }}
+          expires={150}><span className="text-cookies">Nous utilisons des cookies pour vous garantir la meilleure expèrience sur notre site. Si vous continuez à utiliser ce dernier, 
+          nous considérerons que vous acceptez l'utilisation des cookies. </span>
+          <span><Link to='/cookies' id='savoir'>En savoir plus</Link></span>
       </CookieConsent>
-      
+      </Router>
     </>
 )
 }
