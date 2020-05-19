@@ -47,7 +47,7 @@ export default function Thanks() {
             Votre soumission est reçue et nous vous contacterons bientôt
       </h2>
         <button className="form-btn" >
-                <Link to='/' >Acceuil</Link>    
+                <Link rel="canonical" to='/' >Acceuil</Link>    
         </button>
     </div>
     </>

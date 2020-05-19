@@ -53,7 +53,7 @@ const NotFoundPage = () => (
       trouvée. Veuillez retourner à la page d'accueil ou contactez-nous.
     </p>
     <div className="container-contact100-form-btn">
-      <Link to="/">
+      <Link rel="canonical" to="/">
         <button className="contact100-form-btn">Page d'Accueil</button>
       </Link>
             </div>

@@ -25,10 +25,10 @@ const Menu = () => {
                             <div className="col-6@md">
                             <nav>
                                 <ul className="cd-nav__primary">
-                                    <Link to="/" onClick={() => setActive(!isActive)}><li title="Acceuil"><h2>Acceuil</h2></li></Link>
-                                    <Link to="/gallerie" onClick={() => setActive(!isActive)}><li title="Gallerie"><h2>Gallerie</h2></li></Link>
-                                    <Link to="/apropos" onClick={() => setActive(!isActive)}><li title=" à propos"><h2>À Propos</h2></li></Link>
-                                    <Link to="/contact" onClick={() => setActive(!isActive)}><li title="Contact"><h2>Contact</h2></li></Link>
+                                    <Link rel="canonical" to="/" onClick={() => setActive(!isActive)}><li title="Acceuil"><h2>Acceuil</h2></li></Link>
+                                    <Link rel="canonical" to="/gallerie" onClick={() => setActive(!isActive)}><li title="Gallerie"><h2>Gallerie</h2></li></Link>
+                                    <Link rel="canonical" to="/apropos" onClick={() => setActive(!isActive)}><li title=" à propos"><h2>À Propos</h2></li></Link>
+                                    <Link rel="canonical" to="/contact" onClick={() => setActive(!isActive)}><li title="Contact"><h2>Contact</h2></li></Link>
                                 </ul>
                             </nav>
                             </div>

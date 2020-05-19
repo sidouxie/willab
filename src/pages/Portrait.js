@@ -219,7 +219,7 @@ export default class Portrait extends Component {
           </div>
           <div className="items_suivant">
 
-            <Link to='/gallerie/hirak'>
+            <Link rel="canonical" to='/gallerie/hirak'>
             <div className="item_suivant">
               <img className="bg_suivant" src={imgLeft} alt="section portrait prise par Walid Khaladi" ></img>
               <h3 className="titre_suivant">Hirak du 2019.</h3>
@@ -227,7 +227,7 @@ export default class Portrait extends Component {
             </div>
             </Link>
 
-            <Link to='/gallerie/nature'>
+            <Link rel="canonical" to='/gallerie/nature'>
             <div className="item_suivant">
               <img className="bg_suivant" src={imgRight} alt="section portrait prise par Walid Khaladi" ></img>
               <h3 className="titre_suivant">Nature.</h3>

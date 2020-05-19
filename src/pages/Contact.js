@@ -2,11 +2,32 @@ import React, { Component } from "react"
 import SEO from "../components/seo"
 import img1 from '../images/contact/contact_1.jpg'
 
+
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 export default class Contact extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = { name: "", prenom: "", email: "", message: "", phone: "" }
   }
+
+      /* Here’s the juicy bit for posting the form submission */
+
+      handleSubmit = e => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact", ...this.state })
+        })
+          .then(() => alert("Success!"))
+          .catch(error => alert(error));
+  
+        e.preventDefault();
+      };
 
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value })
@@ -14,6 +35,7 @@ export default class Contact extends Component {
 
 
   render() {
+    const { name, prenom, email, message, phone } = this.state;
     return (
         <>
             <SEO
@@ -85,11 +107,12 @@ export default class Contact extends Component {
                   <input
                     id="first-name"
                     className="input100"
-                    type="text"
-                    name="name"
+                    type="prenom"
+                    name="prenom"
+                    value={prenom}
                     placeholder="Prénom"
-                    required
                     onChange={this.handleChange}
+                    required
                   />
                   <span className="focus-input100" />
                 </div>
@@ -103,8 +126,9 @@ export default class Contact extends Component {
                 >
                   <input
                     className="input100"
-                    type="text"
+                    type="name"
                     name="name"
+                    value={name}
                     placeholder="Nom"
                     required
                     onChange={this.handleChange}
@@ -123,6 +147,7 @@ export default class Contact extends Component {
                     className="input100"
                     type="email"
                     name="email"
+                    value={email}
                     placeholder="example@email.com"
                     required
                     onChange={this.handleChange}
@@ -137,8 +162,9 @@ export default class Contact extends Component {
                   <input
                     id="phone"
                     className="input100"
-                    type="text"
+                    type="phone"
                     name="phone"
+                    value={phone}
                     placeholder="+1 800 000000"
                     required
                     onChange={this.handleChange}
@@ -158,6 +184,7 @@ export default class Contact extends Component {
                     className="input100"
                     type="text"
                     name="message"
+                    value={message}
                     placeholder="Écrivez-nous un message"
                     required
                     onChange={this.handleChange}

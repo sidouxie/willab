@@ -11,9 +11,9 @@ const Footer = () => {
                 </div>
                 <div className="item-link">
                     <ul>
-                        <Link to='/cookies'><li>Conditions Générales</li></Link> 
-                        <Link to='/politique-confidentialite'><li>Politique de Confidentialité</li></Link> 
-                        <Link to='/contact'><li>Contact</li></Link> 
+                        <Link rel="canonical" to='/cookies'><li>Conditions Générales</li></Link> 
+                        <Link rel="canonical" to='/politique-confidentialite'><li>Politique de Confidentialité</li></Link> 
+                        <Link rel="canonical" to='/contact'><li>Contact</li></Link> 
                     </ul>
                 </div>
             </div>

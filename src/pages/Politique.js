@@ -47,7 +47,7 @@ const Politique = () => {
 <li>Éventuellement, la politique du site en matière de fichiers témoins ("cookies").</li>
 </ul>
 <p>Cette politique de confidentialité complète les Conditions générales d'utilisation que vous pouvez consulter à l'adresse ci-après&nbsp;:</p>
-<p style={{margin : '10px auto'}}><span id="span_id_url_cgu"  ><Link to='/cookies'>https://walidkhaladi.ml/cookies</Link></span></p>
+<p style={{margin : '10px auto'}}><span id="span_id_url_cgu"  ><Link rel="canonical" to='/cookies'>https://walidkhaladi.ml/cookies</Link></span></p>
 <p className='titre_h3'><br /><br />1. COLLECTE DE RENSEIGNEMENTS PERSONNELS</p>
 <p>Nous collectons les renseignements personnels suivants&nbsp;: </p>
 <ul>
@@ -224,7 +224,7 @@ const Politique = () => {
 
 <p className='titre_h3'><br /><br />13. CONDITIONS DE MODIFICATION DE LA POLITIQUE DE CONFIDENTIALITÉ</p>
 <p>La présente politique de confidentialité peut être consulté à tout moment à l'adresse ci-après indiquée&nbsp;:</p>
-<p style={{margin : '10px auto'}}><span id="span_id_adresse_politique_confidentialite"  ><Link to='/politique-confidentialite'>https://walidkhaladi.ml/politique-confidentialite</Link></span></p>
+<p style={{margin : '10px auto'}}><span id="span_id_adresse_politique_confidentialite"  ><Link rel="canonical" to='/politique-confidentialite'>https://walidkhaladi.ml/politique-confidentialite</Link></span></p>
 <p>Nous nous réservons le droit de la modifier afin de garantir sa conformité avec le droit en vigueur.</p>
 <p>Par conséquent, vous êtes invité(e) à venir consulter régulièrement cette politique de confidentialité afin de vous tenir informé(e) des derniers changements qui lui seront apportés. </p>
 <p>Toutefois, en cas de modification substantielle de cette politique, vous en serez informé(e) de la manière suivante&nbsp;:</p>

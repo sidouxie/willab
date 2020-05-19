@@ -7,12 +7,14 @@
 .copyright {
     line-height: 1.5;
     margin-bottom: 1rem;
+    font-size: 14px;
 }
 footer {
     font-family: sans-serif;
     color: #232323;
     text-align: center;
     padding: 1em 0;
+    padding-bottom: 3em;
     background-color: #080808;
 }
 
@@ -64,7 +66,7 @@ footer a:focus {
         margin-right: 1em;
 
         li{
-            margin-left: 2em;
+            margin-left: 1em;
         }
     }
 }
