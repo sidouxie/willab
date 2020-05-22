@@ -1,6 +1,7 @@
 import React, { Component } from "react"
 import SEO from "../components/seo"
 import img1 from '../images/contact/contact_1.jpg'
+import { Redirect } from 'react-router-dom'
 
 
 const encode = (data) => {
@@ -23,7 +24,9 @@ export default class Contact extends Component {
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: encode({ "form-name": "contact", ...this.state })
         })
-          .then(() => alert("Success!"))
+          .then(() => {
+            return <Redirect from="/contact" to="/thanks/" />
+          })
           .catch(error => alert(error));
   
         e.preventDefault();
@@ -80,6 +83,7 @@ export default class Contact extends Component {
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
                 noValidate
+                netlify
               >
                 <span className="contact100-form-title">
                   Envoie-nous un message
