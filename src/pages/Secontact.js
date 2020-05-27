@@ -2,10 +2,10 @@ import React, { Component } from "react"
 import SEO from "../components/seo"
 import Recaptcha from "react-google-recaptcha"
 import dotenv from 'dotenv'
-import cors from 'cors'
+
 
 dotenv.config()
-cors();
+
 
 const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
 

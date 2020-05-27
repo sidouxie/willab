@@ -41,7 +41,7 @@ function App() {
             <Route rel="canonical" path='/cookies' component={Cookies}/>
             <Route rel="canonical" path='/politique-confidentialite' component={Politique}/>
             <Route rel="canonical" path='/thanks' component={Thanks} />
-            <Route rel="canonical" path='*' component={NotFoundPage} />
+            <Route rel="canonical" path='/*' component={NotFoundPage} />
           </Switch>
         <Social />
         <Footer />

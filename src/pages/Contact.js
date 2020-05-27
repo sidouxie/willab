@@ -1,7 +1,8 @@
 import React, { Component } from "react"
 import SEO from "../components/seo"
 import img1 from '../images/contact/contact_1.jpg'
-import { Redirect } from 'react-router-dom'
+
+
 
 
 const encode = (data) => {
@@ -13,23 +14,24 @@ const encode = (data) => {
 export default class Contact extends Component {
   constructor(props) {
     super(props)
-    this.state = { name: "", prenom: "", email: "", message: "", phone: "" }
+    this.state = { }
   }
 
       /* Here’s the juicy bit for posting the form submission */
 
       handleSubmit = e => {
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact", ...this.state })
-        })
-          .then(() => {
-            return <Redirect from="/contact" to="/thanks/" />
-          })
-          .catch(error => alert(error));
-  
         e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    })
+      .then(() => alert("get submet"))
+      .catch(error => alert(error));
       };
 
   handleChange = e => {
@@ -38,7 +40,7 @@ export default class Contact extends Component {
 
 
   render() {
-    const { name, prenom, email, message, phone } = this.state;
+    
     return (
         <>
             <SEO
@@ -111,9 +113,9 @@ export default class Contact extends Component {
                   <input
                     id="first-name"
                     className="input100"
-                    type="prenom"
+                    type="text"
                     name="prenom"
-                    value={prenom}
+
                     placeholder="Prénom"
                     onChange={this.handleChange}
                     required
@@ -130,9 +132,9 @@ export default class Contact extends Component {
                 >
                   <input
                     className="input100"
-                    type="name"
+                    type="text"
                     name="name"
-                    value={name}
+
                     placeholder="Nom"
                     required
                     onChange={this.handleChange}
@@ -151,7 +153,7 @@ export default class Contact extends Component {
                     className="input100"
                     type="email"
                     name="email"
-                    value={email}
+
                     placeholder="example@email.com"
                     required
                     onChange={this.handleChange}
@@ -168,7 +170,7 @@ export default class Contact extends Component {
                     className="input100"
                     type="phone"
                     name="phone"
-                    value={phone}
+
                     placeholder="+1 800 000000"
                     required
                     onChange={this.handleChange}
@@ -188,7 +190,7 @@ export default class Contact extends Component {
                     className="input100"
                     type="text"
                     name="message"
-                    value={message}
+
                     placeholder="Écrivez-nous un message"
                     required
                     onChange={this.handleChange}

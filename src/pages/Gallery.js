@@ -1,28 +1,12 @@
-import React, { useEffect} from 'react'
+import React from 'react'
 import LightboxEx from '../components/LightboxEx'
 import SEO from '../components/seo'
-import gsap from 'gsap'
+
 
 import img1 from '../images/acceuil_2.jpg'
 
 export default function Gallery() {
 
-    useEffect(() => {
-
-      gsap.to(".fadeIn",
-        {
-          duration: 1,
-          opacity: 1,
-          y: -20,
-          ease: 'power3.easeOut',
-          stagger: {
-            amount: 0.5
-          }
-        })
-        
-    })
-    
-    
     return (
         <div>
         <SEO
