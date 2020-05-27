@@ -99,6 +99,7 @@
 .item-text p{
     letter-spacing: 1px;
     line-height: 1.5;
+    color: rgba(255,255,255,0.6);
 }
 .item-text a{
     text-decoration: none;
@@ -107,10 +108,14 @@
     text-decoration: underline;
 }
 
+.item-text li{
+    color: rgba(255,255,255,0.6);
+}
+
 .titre_h3{
     font-family: 'WorkSans' !important;
     font-size: 1.4em;
-    color: #787878;
+    color: #fff;
     margin: 1em auto;
 }
 
